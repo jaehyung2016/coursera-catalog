@@ -1,0 +1,17 @@
+<div class="course_list">
+  <% @courses.each do |course| %>
+    <div class="course_info"> 
+      <div class="course_image">
+        <div style="background-image: url( <%= 
+          course['photoUrl']
+        %> );"></div>
+      </div>
+      <div class="course_name">
+        <%= course["name"] %>
+      </div>
+      <div class="course_description">
+        <%= course["description"] %>
+      </div>
+    </div>
+  <% end %>
+</div>

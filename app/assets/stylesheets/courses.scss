@@ -1,3 +1,32 @@
 // Place all the styles related to the Courses controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body { margin: 0 5% }
+.course_image { display: none; }
+
+@media (min-width: 768px) {
+  .course_info {
+    overflow: hidden;
+  }
+  .course_image {
+    float: left;
+    width: 20%;
+    padding: .5em;
+    display: block;
+  }
+  .course_image > div {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    height: 8em;
+  }
+  .course_description {
+    overflow: hidden;
+  }
+}
