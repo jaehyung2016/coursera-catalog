@@ -7,26 +7,197 @@
   margin: 0;
   padding: 0;
 }
-body { margin: 0 5% }
+
+body {
+  margin: 0 5%;
+}
+
 .course_image { display: none; }
 
 @media (min-width: 768px) {
   .course_info {
     overflow: hidden;
   }
+
   .course_image {
     float: left;
     width: 20%;
     padding: .5em;
     display: block;
   }
+
   .course_image > div {
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: center;
     height: 8em;
   }
+
   .course_description {
     overflow: hidden;
   }
+}
+
+// About modal box
+.modal_box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.8);
+  display: none;
+}
+
+.modal_visible {
+  display: flex;
+}
+
+.modal_content {
+  margin: auto;
+  width: 80%;
+  max-height: 80%;
+  overflow: auto;
+  background-color: beige;
+}
+
+.loading_image {
+  color: lightgreen;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.fa-close {
+  float: right;
+  display: block;
+  margin: 0.2em;
+  color: #AAA;
+}
+
+.fa-close:hover {
+  color: #555;
+  cursor: pointer;
+}
+
+
+// Menu bar
+.menu_bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+}
+
+.responsive_menu {
+  margin-left: 4%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.menu_items {
+  position: absolute;
+  display: none;
+  background-color: #f9f9f9;
+  color: black;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+}
+
+.responsive_menu:hover .menu_items {
+  display: block;
+}
+
+.menu_bar span {
+  padding: 0.5em 1em;
+}
+
+.menu_bar span:hover {
+  cursor: pointer;
+}
+
+.menu_bar li {
+  list-style-type: none;
+}
+
+.menu_bar a {
+  display: block;
+  padding: 0.5em 1em;
+  color: black;
+}
+
+.menu_bar a:hover {
+  background-color: #d0d0d0;
+}
+
+@media (min-width: 768px) {
+  .menu_bar span { display: none; }
+  .menu_bar li { float: left; }
+
+  .menu_items {
+    display: block;
+    position: static;
+  }
+
+  .menu_bar a {
+    color: white;
+  }
+  .menu_bar a:hover {
+    background-color: red;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+// Page Layout
+form {
+  float: right;
+  margin: 1em;
+}
+
+.course_list {
+  clear: both;
+}
+
+h1 {
+  margin: 1.5em 1em 0.3em;
+  text-align: center;
+  color: blue;
+}
+
+.course_info:nth-child(odd) {
+  background-color: azure;
+}
+
+.course_name {
+  font-weight: bold;
+  margin: 0.5em;
+}
+
+.course_description {
+  margin: 0.5em;
+}
+
+// styles for about.html
+#about_content {
+  margin: 3%;
+}
+
+h2 {
+  margin: 0.5em;
+  color: green;
+}
+
+#about_content p {
+  margin: 0.5em;
+}
+
+#about_content ul {
+  margin-left: 2em;
+  color: red;
 }
