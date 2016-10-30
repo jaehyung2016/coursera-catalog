@@ -3,13 +3,12 @@ class Coursera
 
   base_uri 'https://api.coursera.org/api/courses.v1'
 
-  COUNT = 5
-  default_params limit: COUNT, q: :search, fields: "description,photoUrl"
+  default_params q: :search, fields: "description,photoUrl"
 
-  def initialize page, keyword
-    @hash = {}
+  def initialize count, page, keyword
+    @hash = { limit: count }
     if page > 1
-      @hash[:start] = (page - 1) * COUNT
+      @hash[:start] = (page - 1) * count
     end
     if keyword
       @hash[:query] = keyword

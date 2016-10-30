@@ -2,7 +2,7 @@ require 'test_helper'
 
 class CourseraTest < ActiveSupport::TestCase
   setup do
-    @coursera = Coursera.new 2, 'ruby'
+    @coursera = Coursera.new 5, 2, 'ruby'
   end
 
   test "print query string" do

@@ -1,0 +1,14 @@
+<nav class="pager">
+  <div>
+    <a <%= prev_link @page, @keyword %> > 
+      <span class="fa fa-angle-double-left"></span>
+      <span>previous</span>
+    </a>
+  </div>
+  <div>
+    <a <%= next_link @page, @count, @total, @keyword %> >
+      <span>next</next>
+      <span class="fa fa-angle-double-right"></span>
+    </a>
+  </div>
+</nav>

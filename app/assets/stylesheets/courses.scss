@@ -9,7 +9,7 @@
 }
 
 body {
-  margin: 0 5%;
+  margin: 5%;
 }
 
 .course_image { display: none; }
@@ -30,7 +30,7 @@ body {
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: center;
-    height: 8em;
+    height: 10em;
   }
 
   .course_description {
@@ -200,4 +200,13 @@ h2 {
 #about_content ul {
   margin-left: 2em;
   color: red;
+}
+
+// Pager
+nav div {
+  text-align: center;
+  width: 50%;
+  float: left;
+  margin-top: 1em;
+  margin-bottom: 2em;
 }
